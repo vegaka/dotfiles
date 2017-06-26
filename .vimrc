@@ -53,6 +53,9 @@ set shiftwidth=4 "Use 4 spaces for indentation
 set softtabstop=4
 
 syntax on
+set cindent
+set incsearch
+set hlsearch
 
 if has("autocmd")
     "Don't expand tabs in makefiles
