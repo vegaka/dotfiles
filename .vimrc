@@ -28,7 +28,8 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +52,9 @@ set relativenumber "Relative line numbers
 set expandtab "Insert spaces for tab
 set shiftwidth=4 "Use 4 spaces for indentation
 set softtabstop=4
+
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_collect_identifiers_from_tags_files=1
 
 syntax on
 
