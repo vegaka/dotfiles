@@ -30,6 +30,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,17 +56,32 @@ set shiftwidth=4 "Use 4 spaces for indentation
 set softtabstop=4
 set backspace=indent,eol,start
 
+" YouCompleteMe configuration
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
+
+" UltiSnips configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 syntax on
 set cindent
 set incsearch
 set hlsearch
+
+inoremap { {<CR>}<Esc>ko
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
 
 if has("autocmd")
     "Don't expand tabs in makefiles
