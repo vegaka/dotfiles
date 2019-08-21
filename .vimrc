@@ -2,6 +2,10 @@ set nocompatible " Turn off vi compatibility
 filetype on " Turn on file type detection
 filetype indent on " Load filetype specific indent files
 
+" Load the colour scheme and make it the default
+packadd! gruvbox
+colorscheme gruvbox
+
 set number " Line numbers
 
 set tabstop=4 " Number of spaces per TAB
