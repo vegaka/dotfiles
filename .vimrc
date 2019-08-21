@@ -5,6 +5,7 @@ filetype indent on " Load filetype specific indent files
 " Load the colour scheme and make it the default
 packadd! gruvbox
 colorscheme gruvbox
+set background=dark " Dark version of gruvbox
 
 set number " Line numbers
 
