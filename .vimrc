@@ -11,7 +11,7 @@ set number " Line numbers
 set tabstop=4 " Number of spaces per TAB
 set shiftwidth=4 " Width 4 indents
 set softtabstop=4 " Number of columns for a TAB
-set expandtab " Expand TAbs to spaces
+set expandtab " Expand TABs to spaces
 
 syntax on " Turn on syntax highlighting by default
 
