@@ -1,6 +1,6 @@
 set nocompatible " Turn off vi compatibility
 filetype on " Turn on file type detection
-filetype indent on " Load filetype specific indent files
+filetype plugin indent on " Load filetype specific plugin and indent files
 
 " Load the colour scheme and make it the default
 packadd! gruvbox
@@ -24,3 +24,19 @@ set lazyredraw " Redraw only when needed
 set showmatch " Highlight matching {[()]}
 
 autocmd FileType make setlocal noexpandtab softtabstop=0 " Makefiles uses actual TABs instead of spaces
+
+" Status line
+set laststatus=2 " Always display the status line
+
+let gitBranch=system("git branch --show-current 2>/dev/null | tr -d '\n'")
+set statusline=%#Comment#
+set statusline+=\ %{gitBranch}\ 
+set statusline+=\ %F
+set statusline+=\ %m
+set statusline+=\ %r
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %l:%c
+set statusline+=\ 
