@@ -9,9 +9,7 @@ mkdir -p $HOME/.vim
 # Symlink the .vimrc file to a place where Vim looks for it
 ln -s $SRC_DIR/.vimrc $HOME/.vim/vimrc
 
-# Create folder for colour schemes
-COL_FOLDER=$HOME/.vim/pack/colourschemes/opt
-mkdir -p $COL_FOLDER
-
-# Download plugins
-git clone https://github.com/gruvbox-community/gruvbox.git $COL_FOLDER/gruvbox
+# Create folder for plugins and download them
+PLUGIN_FOLDER=$HOME/.vim/pack/plugins/opt
+mkdir -p $PLUGIN_FOLDER
+git clone https://github.com/gruvbox-community/gruvbox.git $PLUGIN_FOLDER/gruvbox
