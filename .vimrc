@@ -28,7 +28,7 @@ autocmd FileType make setlocal noexpandtab softtabstop=0 " Makefiles uses actual
 " Status line
 set laststatus=2 " Always display the status line
 
-let gitBranch=system("git branch --show-current 2>/dev/null | tr -d '\n'")
+let gitBranch=system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 set statusline=%#Comment#
 set statusline+=\ %{gitBranch}\ 
 set statusline+=\ %F
