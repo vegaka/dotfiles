@@ -39,4 +39,5 @@ set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %l:%c
+set statusline+=\[%L\ lines\]
 set statusline+=\ 
