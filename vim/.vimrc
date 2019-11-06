@@ -22,6 +22,7 @@ set showcmd " Show current command on the status bar
 set wildmenu " Visual autocomplete for command menu
 set lazyredraw " Redraw only when needed
 set showmatch " Highlight matching {[()]}
+set colorcolumn=80 " Highlight column 80
 
 autocmd FileType make setlocal noexpandtab softtabstop=0 " Makefiles uses actual TABs instead of spaces
 
